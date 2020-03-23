@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useContext} from 'react';
 import { DataContext } from "./DataContext";
 
 function Todo({task,completed,id}) {

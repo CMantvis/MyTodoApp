@@ -16,7 +16,7 @@ function AddTodo() {
     }
 
     return (
-        <div>
+        <div className="addTodo">
             <form onSubmit={addTask}>
                 <input type="text" placeholder="Add a task" name="task" value={task} onChange={handleChange} />
                 <button>Submit</button>

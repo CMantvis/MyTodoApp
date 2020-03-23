@@ -1,5 +1,55 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+
+  width: 90%;
+  margin: auto;
+}
+
+.addTodo {
+  width: 100%;
+  background-color: gainsboro;
+  padding: 50px 50px;
+}
+
+.addTodo input {
+  width: 80%;
+}
+
+.addTodo button {
+  border: none;
+  border-radius: 8px;
+  padding: 2px 2px;
+  background-color: rgb(122, 117, 117);
+  margin-left: 2px;
+}
+
+
 .todo {
   display: flex;
+  background: aliceblue;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  
 }
+
+.todo:nth-child(even) {
+  background: rgb(220, 239, 255);
+}
+
+.todo h3 {
+  margin: auto 10px;
+}
+
+.todo button {
+  margin-left: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background: rgb(122, 117, 117);
+}
+
