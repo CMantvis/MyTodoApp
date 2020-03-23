@@ -1,12 +1,18 @@
-import React,{useContext} from 'react'
-import {DataContext} from "./DataContext"
+import React, { useContext } from 'react';
+import { DataContext } from "./DataContext";
+import Todo from "./Todo";
+
 function TodoList() {
-    const value = useContext(DataContext)
+    const [list, setList] = useContext(DataContext);
     return (
-        <div>
-            {value}
+        <div className="TodoList">
+            {
+                list.map(item => (
+                    <Todo key={item.id} task={item.task} completed={item.completed} id={item.id} />
+                ))
+            }
         </div>
     )
 }
 
-export default TodoList
+export default TodoList;

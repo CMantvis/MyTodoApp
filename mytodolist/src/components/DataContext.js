@@ -1,30 +1,31 @@
-import React, {useState,useContext, createContext} from 'react'
+import React, { useState, createContext } from 'react';
 
 export const DataContext = createContext();
 
 export const DataProvider = props => {
-    const [list, setList] =useState([
+    const [list, setList] = useState([
         {
             task: "buy a bag",
-            completed : false,
+            completed: false,
             id: 23434
         },
         {
             task: "feed the cat",
-            completed : false,
+            completed: false,
             id: 12345
         },
         {
             task: "walk the dog",
-            completed : false,
+            completed: false,
             id: 67890
         }
     ]);
+
     return (
-        <DataContext.Provider value="hello">
+        <DataContext.Provider value={[list, setList]}>
             {props.children}
         </DataContext.Provider>
     )
 }
 
-export default DataContext
+export default DataContext;
